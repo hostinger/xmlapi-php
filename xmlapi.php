@@ -2332,6 +2332,12 @@ class xmlapi
         return $this->api1_query($username, 'Email', 'addpop', $args);
     }
 
+    // This function retrieves the server's drive partition information.
+    public function getserverdiskusage()
+    {
+        return $this->xmlapi_query('getdiskusage');
+    }
+
     // This API function parks a domain onto this user's account
     public function park($username, $newdomain, $topdomain)
     {
